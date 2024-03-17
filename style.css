@@ -1,24 +1,34 @@
+/*-------------------------------------------
+セクションタイトルのスタイル
+-------------------------------------------*/
 .section-title {
-    font-size: 2.25rem;
-    font-weight: 700;
-    display: inline-block;
-    position: relative;
+  font-size: 2.25rem; /* フォントサイズ */
+  font-weight: 700; /* フォントの太さ */
+  position: relative; /* 相対位置指定 */
 }
-  .section-title::after {
-    position: absolute;
-    content: "";
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 3px;
-    width: 100px;
-    background-color: red;
+/* セクションタイトルの下に横線を表示 */
+.section-title::after {
+  position: absolute;          /* 絶対位置指定 */
+  content: "";                 /* 疑似要素の内容 */
+  bottom: -10px;               /* タイトル下の位置 */
+  left: 50%;                   /* タイトル中央の位置 */
+  transform: translateX(-50%); /* 中央揃え */
+  height: 3px;                 /* 線の高さ */
+  width: 100px;                /* 線の幅 */
+  background-color: red;    /* 線の色 */
 }
 
+/* 解説 
+タイトルに相対指定、疑似要素は絶対指定
+㊟レスポンス時のためにbottomを設定すること
+*/
 
-  body {
-    display: grid;
-    place-items: center;
-    inset: 0;
-    height: 100vh;
+/*-------------------------------------------
+ページ全体を中央に配置
+-------------------------------------------*/
+body {
+  display: grid; /* グリッド表示 */
+  place-items: center; /* アイテムを中央に配置 */
+  inset: 0; /* 画面端に配置 */
+  height: 100vh; /* ビューポートの高さいっぱいに表示 */
 }
