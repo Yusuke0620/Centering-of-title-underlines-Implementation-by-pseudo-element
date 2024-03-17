@@ -1,0 +1,24 @@
+.section-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    display: inline-block;
+    position: relative;
+}
+  .section-title::after {
+    position: absolute;
+    content: "";
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 3px;
+    width: 100px;
+    background-color: red;
+}
+
+
+  body {
+    display: grid;
+    place-items: center;
+    inset: 0;
+    height: 100vh;
+}
